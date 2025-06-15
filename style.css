@@ -15,6 +15,8 @@ nav{
     width: 100%;
     height: 10vh;
     position: sticky;
+    display: flex;
+    align-items: center;
 }
 .nav-container{
     width: 100%;
@@ -23,11 +25,15 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    position: relative;
 }
 .logo{
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .logo span{
     color: #6616ef;
@@ -204,9 +210,11 @@ section{
 @media (max-width: 884px) {
     nav .logo{
         position: absolute;
-        top: 16px;
         left: 15px;
         font-size: 1.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
     .main-container {
         display: flex;
@@ -249,12 +257,14 @@ section{
     .nav-right {
         position: absolute;
         right: clamp(60px, 8vw, 70px);
-        top: clamp(12px, 2vw, 16px);
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
     
     .products-btn {
-        padding: clamp(5px, 1.2vw, 8px) clamp(10px, 1.8vw, 16px);
-        font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+        padding: clamp(7px, 1.5vw, 10px) clamp(14px, 2.2vw, 20px);
+        font-size: clamp(0.85rem, 1.4vw, 1rem);
     }
 }
 @media (max-width: 576px) {
@@ -289,12 +299,12 @@ section{
     }
     
     .products-btn {
-        padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
-        font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+        padding: clamp(6px, 1.3vw, 8px) clamp(12px, 2vw, 16px);
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
     
     .products-btn i {
-        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+        font-size: clamp(0.9rem, 1.4vw, 1rem);
     }
 }
 @media (max-width: 360px) {
@@ -317,35 +327,38 @@ section{
     }
     
     .products-btn {
-        padding: clamp(3px, 0.8vw, 4px) clamp(6px, 1.2vw, 8px);
-        font-size: clamp(0.65rem, 1.1vw, 0.75rem);
+        padding: clamp(5px, 1.1vw, 6px) clamp(10px, 1.8vw, 12px);
+        font-size: clamp(0.75rem, 1.2vw, 0.85rem);
     }
     
     .products-btn i {
-        font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+        font-size: clamp(0.85rem, 1.3vw, 0.95rem);
     }
 }
 .nav-right {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .products-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: clamp(4px, 1vw, 8px);
-    padding: clamp(6px, 1.5vw, 10px) clamp(12px, 2vw, 20px);
+    gap: clamp(6px, 1.2vw, 10px);
+    padding: clamp(8px, 1.8vw, 12px) clamp(16px, 2.5vw, 24px);
     background: linear-gradient(45deg, #6616ef, #4200b4);
     color: white;
     text-decoration: none;
-    border-radius: clamp(20px, 3vw, 25px);
+    border-radius: clamp(25px, 3.5vw, 30px);
     font-weight: 500;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(102, 22, 239, 0.3);
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    height: fit-content;
+    line-height: 1;
 }
 
 .products-btn::before {
@@ -386,7 +399,7 @@ section{
 }
 
 .products-btn i {
-    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    font-size: clamp(1rem, 1.7vw, 1.2rem);
     position: relative;
     z-index: 1;
 }
