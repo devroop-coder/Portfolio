@@ -248,13 +248,13 @@ section{
     }
     .nav-right {
         position: absolute;
-        right: 70px;
-        top: 16px;
+        right: clamp(60px, 8vw, 70px);
+        top: clamp(12px, 2vw, 16px);
     }
     
     .products-btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+        padding: clamp(5px, 1.2vw, 8px) clamp(10px, 1.8vw, 16px);
+        font-size: clamp(0.75rem, 1.3vw, 0.9rem);
     }
 }
 @media (max-width: 576px) {
@@ -285,16 +285,16 @@ section{
         font-size: 1rem;
     }
     .nav-right {
-        right: 60px;
+        right: clamp(50px, 7vw, 60px);
     }
     
     .products-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
+        padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
+        font-size: clamp(0.7rem, 1.2vw, 0.8rem);
     }
     
     .products-btn i {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
     }
 }
 @media (max-width: 360px) {
@@ -312,6 +312,18 @@ section{
         height: 2rem;
         font-size: 1rem;
     }
+    .nav-right {
+        right: clamp(40px, 6vw, 50px);
+    }
+    
+    .products-btn {
+        padding: clamp(3px, 0.8vw, 4px) clamp(6px, 1.2vw, 8px);
+        font-size: clamp(0.65rem, 1.1vw, 0.75rem);
+    }
+    
+    .products-btn i {
+        font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    }
 }
 .nav-right {
     display: flex;
@@ -321,18 +333,19 @@ section{
 .products-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: clamp(4px, 1vw, 8px);
+    padding: clamp(6px, 1.5vw, 10px) clamp(12px, 2vw, 20px);
     background: linear-gradient(45deg, #6616ef, #4200b4);
     color: white;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: clamp(20px, 3vw, 25px);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(102, 22, 239, 0.3);
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .products-btn::before {
@@ -373,7 +386,7 @@ section{
 }
 
 .products-btn i {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
     position: relative;
     z-index: 1;
 }
